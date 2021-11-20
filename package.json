@@ -1,0 +1,35 @@
+{
+  "name": "scankey",
+  "version": "1.0.1",
+  "description": "scan keywords with babel ast",
+  "bin": {
+    "scankey": "bin/scankey.js"
+  },
+  "keywords": [
+		"babel",
+		"scan",
+		"ast"
+	],
+  "files": [
+    "bin",
+    "src"
+  ],
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/N1rvJS/taro.git"
+	},
+  "scripts": {
+    "test": "node bin/scankey --root ./test --keywords mock.key.com"
+  },
+  "author": "duyinghua",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/traverse": "^7.16.3",
+    "@babel/parser": "^7.16.4",
+    "@babel/generator": "^7.16.0",
+    "commander": "^2.19.0",
+    "chalk": "^4.1.2",
+    "klaw": "^4.0.1",
+    "ora": "^2.1.0"
+  }
+}
