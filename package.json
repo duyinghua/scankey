@@ -1,6 +1,6 @@
 {
   "name": "scankey",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "scan keywords with babel ast",
   "bin": {
     "scankey": "bin/scankey.js"
@@ -16,7 +16,7 @@
   ],
   "repository": {
 		"type": "git",
-		"url": "git+https://github.com/N1rvJS/taro.git"
+		"url": "git+https://github.com/duyinghua/scankey.git"
 	},
   "scripts": {
     "test": "node bin/scankey --root ./test --keywords mock.key.com"
