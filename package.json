@@ -6,30 +6,30 @@
     "scankey": "bin/scankey.js"
   },
   "keywords": [
-		"babel",
-		"scan",
-		"ast"
-	],
+    "babel",
+    "scan",
+    "ast"
+  ],
   "files": [
     "bin",
     "src"
   ],
   "repository": {
-		"type": "git",
-		"url": "git+https://github.com/duyinghua/scankey.git"
-	},
+    "type": "git",
+    "url": "git+https://github.com/duyinghua/scankey.git"
+  },
   "scripts": {
     "test": "node bin/scankey --root ./test --keywords mock.key.com"
   },
   "author": "duyinghua",
   "license": "ISC",
   "dependencies": {
-    "@babel/traverse": "^7.16.3",
-    "@babel/parser": "^7.16.4",
     "@babel/generator": "^7.16.0",
-    "commander": "^2.19.0",
+    "@babel/parser": "^7.16.4",
+    "@babel/traverse": "^7.16.3",
     "chalk": "^4.1.2",
+    "commander": "^2.19.0",
     "klaw": "^4.0.1",
-    "ora": "^2.1.0"
+    "ora": "^5.0.0"
   }
 }

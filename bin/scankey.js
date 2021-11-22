@@ -33,6 +33,7 @@ const spinner = ora({
   color: 'blue'
 }).start()
 const scanResult = []
+const startTime = Date.now()
 klaw(scanPath)
   .on('data', file => {
     if (!file.stats.isDirectory()) {
@@ -62,13 +63,14 @@ klaw(scanPath)
   })
   .on('end', () => {
     // console.log('filePaths=====', filePaths)
+    const diffTime = (Date.now() - startTime) / 1000
     if (scanResult.length) {
-      spinner.fail(chalk.red(`代码扫描完成，异常文件: `))
+      spinner.fail(chalk.red(`代码扫描完成(${diffTime}s)，异常文件: `))
       scanResult.forEach(res => {
         console.log(chalk.yellow('\t' + res))
       })
-      process.exit(1) 
+      process.exit(1)
     } else {
-      spinner.succeed(chalk.green('代码扫描完成！'))
+      spinner.succeed(chalk.green(`代码扫描完成(${diffTime}s)！`))
     }
   })
